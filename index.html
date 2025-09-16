@@ -417,12 +417,31 @@
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">Podcast Listening Time Prediction</h2>
-                                    <p class="item-intro text-muted">Kaggle competition - Playground Series - Season 5, Episode 4 - Predict Podcast Listening Time</p>
-                                    <p class="modal-desc mt-5"></p>
-
-                                    <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="" />
+                                    <p class="item-intro text-muted">Kaggle competition - Playground Series S5E4 - Analyze and predict the average listening duration of podcast episodes based on various features.</p>
+                                    <a href="https://github.com/Iris-HuangW/Predict_Podcast_Listening_Time">
+                                    	<button class="btn btn-primary" type="button">
+                                        	<i class="fab fa-github"></i> Github Codes
+                                    	</button>
+                                    </a>
+                                    <p class="modal-desc mt-5">The goal of this project is to build a machine learning model that predicts how many minutes a listener will spend listening to a podcast episode, given metadata and features about the episode. This problem is useful for podcast platforms or hosts aiming to understand engagement, optimize content, or recommend episodes. The training data set contains ~1 million rows, each row represents a podcast episode, with both numerical and categorical features describing the episode, such as Episode_Length_minutes, Genre, Publication_Time, etc. </p>
+                                    <p class="modal-desc">The primary evaluation metric is Root Mean Squared Error (RMSE) or an equivalent squared‐error based metric applied to the predicted vs. actual listening time.</p>
+                                    <img class="img-fluid d-block mx-auto" src="img/RMSE.png" alt="" />
+                                    <p class="modal-desc">To predict the continuous target value, I first trained a majority of regression models and tree models without tuning. After the selections were narrowed down to Random Forest and XGBoost, the GridSearchCV and RandomizedSearchCV packages from Scikit-Learn were used to search for the best tuning hyperparameters. Here listed the RMSE performance of each model.</p>
                                     <ul class="list-inline">
-                                        <li>Date: September 2025</li>
+                                        <li>1. Random Forest         RMSE - 9.980362</li>
+                                        <li>2. Gradient Boosting     RMSE - 10.528610</li>
+                                        <li>3. Tuned Random Forest   RMSE - 10.562413</li>
+                                        <li>4. Tuned XGBoost         RMSE - 10.571584</li>
+                                        <li>5. Tuned XGBoost 2       RMSE - 10.588083</li>
+                                        <li>6. MLP Neural Net        RMSE - 10.640367</li>
+                                        <li>7. SVR                   RMSE - 10.691106</li>
+                                        <li>8. Ridge                 RMSE - 10.744701</li>
+                                        <li>9. Linear Regression     RMSE - 10.744707</li>
+                                        <li>10. Lasso                RMSE - 10.811853</li>
+                                        <li>11. KNN                  RMSE - 11.090327</li>
+                                    </ul>
+                                    <ul class="list-inline">
+                                        <li>Date: August & September 2025</li>
                                         <li>Category: Predictive Modeling & Model Tuning</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
@@ -654,6 +673,7 @@
         <script src="js/scripts.js"></script>
     </body>
 </html>
+
 
 
 
